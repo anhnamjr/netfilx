@@ -93,9 +93,11 @@ export const FeatureCallOut = styled(Text)`
 
 export const Link = styled.p`
   color: #fff;
+  font-size: 20px;
   margin-right: 30px;
   font-weight: ${({active}) => (active ? "700" : "normal")};
   cursor: pointer;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
 
   &:hover {
     font-weight: bold;
@@ -112,6 +114,7 @@ export const Picture = styled.button`
   width: 32px;
   height: 32px;
   border: none;
+  border-radius: 5px;
 `;
 
 export const Dropdown = styled.div`
@@ -122,6 +125,7 @@ export const Dropdown = styled.div`
   right: 0;
   padding: 20px 10px;
   background-color: rgba(0,0,0,0.75);
+  border: 1px solid #ccc;
 
   ${Picture} {
     margin-right: 10px;
@@ -142,6 +146,12 @@ export const Dropdown = styled.div`
       cursor: default;
     }
   }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 export const Profile = styled.div`
@@ -158,7 +168,51 @@ export const Profile = styled.div`
   button {
     cursor: pointer;
   }
+`;
 
+export const Search = styled.div`
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  position: relative;
+  
+  svg {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const SearchIcon = styled.button`
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 20px;
+  }
+`;
+
+export const SearchInput = styled.input`
+  margin-left: ${({active}) => active ? "10px" : "none"};
+  padding: ${({active}) => active ? "0 10px 0 30px" : "0"};
+  opacity: ${({active}) => active ? "1" : "0"};
+  width: ${({active}) => active ? "200px" : "20px"};
+  background: #44444459;
+  color: white;
+  border: 1px solid #fff;
+  transition: width  0.5s;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
 `;
 
 
