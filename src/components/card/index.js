@@ -33,7 +33,7 @@ export default function Card({ children, ...restProps }) {
 }
 
 Card.Group = function CardGroup ({ children, ...restProps }) {
-  return <Group {...restProps}>{children}</Group>;
+  return <Group margin="50px 0" {...restProps}>{children}</Group>;
 };
 
 Card.Title = function CardTitle ({ children, ...restProps }) {
@@ -71,7 +71,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
         <FeatureClose onClick={() => setShowFeature(false)}>
           <img src="/images/icons/close.png" alt="Close" />
         </FeatureClose>
-      </Content>
+      
 
       <Group margin="30px 0" flexDirection="row" alignItems="center">
         <Maturity rating={itemFeature.maturity}>
@@ -82,6 +82,8 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
             itemFeature.genre.slice(1)}
         </FeatureText>
       </Group>
+      {children}
+      </Content>
     </Feature>
   ) : null;
 };

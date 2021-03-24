@@ -21,8 +21,7 @@ export default function useContent(target) {
       .catch((error) => {
         console.log(error);
       });
-  //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [firebase, target]);
 
   return { [target]: content };
 }
