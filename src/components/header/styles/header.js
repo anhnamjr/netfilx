@@ -115,6 +115,7 @@ export const Picture = styled.button`
   height: 32px;
   border: none;
   border-radius: 5px;
+  outline: none;
 `;
 
 export const Dropdown = styled.div`
@@ -213,6 +214,27 @@ export const SearchInput = styled.input`
   height: 30px;
   font-size: 14px;
   border-radius: 5px;
+`;
+
+export const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  max-width: 130px;
+  background-color: #e6e6e6;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: #ff1e1e;
+    color: white;
+  }
 `;
 
 
